@@ -34,7 +34,7 @@ class CreateNewUser implements CreatesNewUsers
 
         $email = $input['email'];
         //On genere le token pour l'activation du compte des utilisateurs
-        $activation_token = md5(uniqid()) . $input['email'] . sha1($email);
+        $activation_token = md5(uniqid()) . $email . sha1($email);
 
         $activation_code = "";
         $length_code = 5;
