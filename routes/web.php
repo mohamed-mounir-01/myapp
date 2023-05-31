@@ -19,6 +19,15 @@ Route::controller(Homecontroller::class)->group(function(){
     Route::get('/', 'home')->name('app_home');
     Route::get('/about', 'about')->name('app_about');
     Route::match(['get', 'post'], '/dashboard', 'dashboard')->middleware('auth')->name('app_dashboard');
+    Route::get('/services//homecleaning', 'homecleaning')->name('app_homecleaning');
+    Route::get('/services//babysitting', 'babysitting')->name('app_babysitting');
+    Route::get('/services//homerepair', 'homerepair')->name('app_homerepair');
+    Route::get('/services//gardener', 'gardener')->name('app_gardener');
+    Route::get('/services//delivery', 'delivery')->name('app_delivery');
+    Route::get('/services//health', 'health')->name('app_health');
+    Route::get('/data', 'data')->name('data');
+    Route::get('/data2', 'data2')->name('data2');
+    Route::get('/inbox', 'inbox')->name('inbox');
 });
 
 Route::controller(Logincontroller::class)->group(function(){
@@ -32,4 +41,5 @@ Route::controller(Logincontroller::class)->group(function(){
     Route::match(['get', 'post'], '/forgot_password', 'forgotPassword')->name('app_forgot_password');
     Route::match(['get', 'post'], '/change_password/{token}', 'changePassword')->name('app_change_password');
 });
+
 
