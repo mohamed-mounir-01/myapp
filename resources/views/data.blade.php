@@ -25,6 +25,24 @@ Les données des clients
   <section class="content">
     <div class="container-fluid">
       <div class="row">
+
+            @if (session()->has('Add'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>{{session()->get('Add')}}</strong>
+                        <button type="button"class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+            @endif
+            @if (session()->has('Error'))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>{{session()->get('Error')}}</strong>
+                        <button type="button"class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+            @endif
+
         <div class="col-12">
 
 
@@ -53,9 +71,9 @@ Les données des clients
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
-                      <form action="{{route('data.store')}}" method="post">
-                        {{csrf_field()}}
-
+                      <form action="{{route('store')}}" method="POST" id="form">
+                        {{-- {{csrf_field()}} --}}
+                        @csrf
                       <div class="modal-body">
                         <div class="card-body">
                             <div class="row">
@@ -152,17 +170,24 @@ Les données des clients
                 </tr>
                 </thead>
                 <tbody>
+                    <?php $i=0; ?>
+
+                    @foreach ($data as $client)
+
+                    <?php $i++; ?>
                 <tr>
-                  <td>1</td>
-                  <td>Mohamed</td>
-                  <td>MOUNIR</td>
-                  <td> Mohamed.mounir.smb@gmail.com</td>
-                  <td>Takaddoum</td>
-                  <td>Beni-Mellal</td>
-                  <td> 26000</td>
-                  <td>Babysitting</td>
-                  <td>Basic</td>
+                    <td>{{$i}}</td>
+                    <td>{{$client->first_name}}</td>
+                    <td>{{$client->second_name}}</td>
+                    <td>{{$client->email}}</td>
+                    <td>{{$client->adress}}</td>
+                    <td>{{$client->city}}</td>
+                    <td>{{$client->code_postal}}</td>
+                    <td>{{$client->service}}</td>
+                    <td>{{$client->plan}}</td>
                 </tr>
+
+                    @endforeach
 
                 </tbody>
 

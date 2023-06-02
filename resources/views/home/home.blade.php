@@ -15,24 +15,27 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="{{asset('images/service1.jpg')}}" class="d-block w-100" alt="image1" style=" height: 500px;">
+                <img src="{{asset('images/service1.jpg')}}" class="d-block w-100" alt="image1" style=" height: 650px;">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Home services</h5>
-                  <p> You trusted home service specialists.</p>
+                  <span class="sub_wo">
+                    You trusted home service specialists
+                    </span><br/><br/>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="{{asset('images/service2.jpg')}}" class="d-block w-100" alt="image2" style=" height: 500px;">
+                <img src="{{asset('images/BabySitting_t580.jpg')}}" class="d-block w-100" alt="image2" style=" height: 650px;">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Home services</h5>
-                  <p>We are home service specialists, here to help.</p>
+                    <span class="sub_wo">
+                        We are home service specialists, here to help
+                      </span><br/><br/>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="{{asset('images/service3.jpg')}}" class="d-block w-100" alt="image3" style=" height: 500px;">
+                <img src="{{asset('images/transplanting.jpg')}}" class="d-block w-100" alt="image3" style=" height: 650px;">
                 <div class="carousel-caption d-none d-md-block">
-                  <h5>Home services</h5>
-                  <p>Count on our skilled specialists to handle your home service tasks with confidence.</p>
+                    <span class="sub_wo">
+                        Rely on our experts for all your home service needs
+                      </span><br/><br/>
                 </div>
               </div>
             </div>
@@ -79,7 +82,8 @@
                         <div class="col-md-12">
                             <div class="section-header text-center pb-5" id="services">
                                 <h2 style="text-align: center;"> Our <span class="text-info"> Services</span></h2>
-                                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                                <p>
+                                    Experience our exceptional services for your home needs. </p>
                             </div>
                         </div>
                         <div class="row">
@@ -163,73 +167,26 @@
             </section>
         </div>
         <br> <br> <br>
-
-<!--Newsletter session-->
-        <section class="contact section-padding" id="contact">
-            <div class="container">
-                <div class="section-title">
-                    <h2 class="title">Have any question ?</h2>
-                </div>
-                <div class="grid contact-grid">
-                    <div class="contact-info">
-                        <div class="contact-info-item">
-                            <i class="bi bi-geo-alt-fill"></i>
-                            <h3>Adress</h3>
-                            <p> ENSABM Mghila, Beni Mellal</p>
-                        </div>
-                        <div class="contact-info-item">
-                            <i class="bi bi-telephone-fill"></i>
-                            <h3>Call Us</h3>
-                            <p>+212 661 *** ****</p>
-                        </div>
-                        <div class="contact-info-item">
-                            <i class="bi bi-envelope"></i>
-                            <h3>Email Us</h3>
-                            <p>tdiensabm@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-form">
-                        <form >
-                            <div class="input-box">
-                                <input type="text" placeholder="name" class="input-control" required>
-                            </div>
-                            <div class="input-box">
-                                <input type="text" placeholder="email" class="input-control" required>
-                            </div>
-                            <div class="input-box">
-                                <input type="text" placeholder="phone" class="input-control" required>
-                            </div>
-                            <div class="input-box">
-                                <textarea placeholder="message" class="input-control" required></textarea>
-                            </div>
-                            <div>
-                                <a href="" class="btn btn-info text-dark" style=""> <b> Send Message</b></a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <br> <br> <br>
         <!--footer section-->
-        <section class="footer">
-            <div class="footer-container container bg-info" style=" width: 100%; text-align: center; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,auto)); gap: 2rem;" >
-                <div class="social">
-                    <i class="bi bi-facebook"></i>
-                    <i class="bi bi-instagram"></i>
-                    <i class="bi bi-linkedin"></i>
-                    <i class="bi bi-twitter"></i>
-                    <br>
-                </div>
-            <div class="copp">
-                <p>&#169; All Right Reserved</p>
-            </div>
+        <div class="sub_footer">
+            <p> 2023 © All rights reserved by {TDI ENSA-BM}</p>
         </div>
-        </section>
 
 @endsection
 <style>
-.contact-info{
+    .sub_footer{
+    background-color:#c8ebf8;;
+    text-align:center;
+    color:black;
+    padding:0.01rem;
+}
 
+    .sub_wo {
+font-family: sans-serif;
+font-weight: bold;
+font-size: 10vmin;
+color: white;
+-webkit-text-stroke: .03em black;
+text-shadow: .05em .05em 0 rgba(0,0,0,1);
 }
 </style>

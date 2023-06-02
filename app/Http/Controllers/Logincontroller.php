@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
+
 class Logincontroller extends Controller
 {
     protected $request;
@@ -22,6 +23,27 @@ class Logincontroller extends Controller
     {
         Auth::logout();
         return redirect()->route('login');
+    }
+
+    public function login(Request $request)
+    {
+        $input = $request->all();
+        $this->validate($request,[
+            'email' =>'required|email',
+            'password' => 'required',
+        ]);
+        if(auth()->attempt(array('email'=> $input['email'], 'password' =>$input['password'])))
+        {
+            if(auth()->user()->is_admin == 1){
+                return redirect()->route('app_dashboard');
+            }elseif(auth()->user()->is_admin == 0){
+                return redirect()->route('app_home');
+            }else{
+                return redirect()->route('app_about');
+            }
+        }else{
+            return redirect()->route('app_login')->with('error', 'Email adress and password are wrong.');
+        }
     }
 
     public function existEmail(){
@@ -80,7 +102,13 @@ class Logincontroller extends Controller
                         ->with('warning', 'your account is not activate yet, please check your mail-box
                         and activate your account or resent the confirmation message.');
         }else{
-            return redirect()->route('app_dashboard');
+            if(auth()->user()->is_admin == 1){
+                return redirect()->route('app_dashboard');
+            }elseif(auth()->user()->is_admin == 0){
+                return redirect()->route('app_home');
+            }else{
+                return redirect()->route('app_about');
+            }
         }
     }
 

@@ -20,14 +20,26 @@ Route::controller(Homecontroller::class)->group(function(){
     Route::get('/about', 'about')->name('app_about');
     Route::match(['get', 'post'], '/dashboard', 'dashboard')->middleware('auth')->name('app_dashboard');
     Route::get('/services//homecleaning', 'homecleaning')->name('app_homecleaning');
+    Route::post('/services//homecleaning', 'homecleaningafter')->name('app_homecleaningafter');
     Route::get('/services//babysitting', 'babysitting')->name('app_babysitting');
+    Route::post('/services//babysitting', 'babysittingafter')->name('app_babysittingafter');
     Route::get('/services//homerepair', 'homerepair')->name('app_homerepair');
+    Route::post('/services//homerepair', 'homerepairafter')->name('app_homerepairafter');
     Route::get('/services//gardener', 'gardener')->name('app_gardener');
+    Route::post('/services//gardener', 'gardenerafter')->name('app_gardenerafter');
     Route::get('/services//delivery', 'delivery')->name('app_delivery');
+    Route::post('/services//delivery', 'deliveryafter')->name('app_deliveryafter');
     Route::get('/services//health', 'health')->name('app_health');
+    Route::post('/services//health', 'healthafter')->name('app_healthafter');
+    Route::get('/contactus', 'contactusbefore')->name('app_contactusbefore');
+    Route::post('/contactus', 'contactusafter')->name('app_contactusafter');
+    Route::get('/admin', 'adminhome')->name('app_adminhome')->middleware('is_admin');
     Route::get('/data', 'data')->name('data');
     Route::get('/data2', 'data2')->name('data2');
     Route::get('/inbox', 'inbox')->name('inbox');
+    Route::get('/compose', 'compose')->name('compose');
+    Route::get('/booking', 'booking')->name('booking');
+    Route::get('/store', 'store')->name('store');
 });
 
 Route::controller(Logincontroller::class)->group(function(){

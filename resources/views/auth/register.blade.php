@@ -39,6 +39,13 @@
                 </div>
 
                 <div class="col-md-12">
+                    <label for="is_admin">Register as</label>
+                    <select name="is_admin" id="is_admin" required>
+                        <option value="0">User</option>
+                        <option value="2">Service provider</option>
+                    </select>
+                </div>
+                <div class="col-md-12">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="agreeTerms">
                         <label class="form-check-label" for="agreeTerms">Agree terms </label><br>

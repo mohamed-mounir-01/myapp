@@ -5,330 +5,497 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alphal/dist/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 <link rel="stylesheet" href="style.css">
-    <section class="home " id="home">
-        <div class="container">
-            <div class="grid">
-                <div class="home-text" style="width: 800px; margin-top: 150px;">
-                    <h1> Need cleaning home services ? </h1>
-                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio ad ipsa cum? Exercitationem labore voluptatum ipsa reprehenderit odio quaerat magni officiis, eum repudiandae sint ad dolores eius a delectus quos.</p>
-                    <div>
-                        <a href="" class="btn btn-info text-dark" style=""> <b> Know More</b></a>
-                    </div>
-                </div>
-                <div class="home-img">
-                    <div class="circle-wrap">
-                        <div class="circle">
-                        </div>
-                    </div>
-                    <img src="{{asset('images/home-img.png')}}" alt="img">
-                </div>
-            </div>
-        </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+<br><br>
+<!--MAIN-->
+<main class="flex">
+    <section class="flex-content padding_1x">
+        <article>
+            <h1 class="title big">Cleaning <em> Home</em> Services</h1>
+        </article>
     </section>
-    <section class="about section-padding" id="about">
-        <div class="container">
-            <div class="grid">
-                <div class="row">
-                    <div class="about-img">
-                        <div class="img-box">
-                            <img src="{{asset('images/about-img.png')}}" alt="img">
-                            <div class="box box-l">
-                                <span> <h3>2.5k</h3></span>
-                                <p>satisfied clients</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-text">
-                    <div class="section-title">
-                        <span class="title"> --About us--</span>
-                        <h2 class="sub-title">We're cleaning scince 2023</h2>
-                    </div>
-                    <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, necessitatibus. Architecto debitis corrupti voluptates, consequatur cum laboriosam necessitatibus porro? Reprehenderit officia consectetur voluptate dolore voluptatem eveniet, numquam temporibus. Quam, enim.</p>
-
-                </div>
-            </div>
-        </div>
+    <section class="flex-content padding_2x">
     </section>
-    <section class="services section-padding" id="services">
-        <div class="container">
-            <div class="section-title">
-                <span class="title">--sevices--</span>
-                <h2 class="sub-title">What we do</h2>
-            </div>
-            <div class="grid" style="width: 100%;">
-                <div class="grid-item">
-                    <div class="services-item">
-                        <div class="img-box">
-                            <img src="{{asset('images/house.jpg')}}" alt="carpet">
-                            <h3>carpet cleaning</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="services-item">
-                        <div class="img-box">
-                            <img src="{{asset('images/window.jpg')}}" alt="window">
-                            <h3>window cleaning</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="services-item">
-                        <div class="img-box">
-                            <img src="{{asset('images/bathroom.jpg')}}" alt="bathroom">
-                            <h3>bathroom cleaning</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="services-item">
-                        <div class="img-box">
-                            <img src="{{asset('images/furniture.png')}}" alt="furniture">
-                            <h3>futniture cleaning</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+</main>
 
-        <section class="pricing section-padding" id="pricing">
-            <div class="container">
-                <div class="section-title">
-                    <span class="title">--pricing--</span>
-                    <h2 class="sub-title"> Our pricing plans</h2>
-                </div>
-                <div class="grid">
-                    <div class="pricing-item bg-body-tertiary">
-                        <div class="pricing-header">
-                            <h3>basic</h3>
-                            <div class="price"><span>$29</span>montly</div>
-                        </div>
-                        <div class="pricing-body">
-                            <ul>
-                                <i class="bi bi-check"></i>window cleaning <br>
-                                <i class="bi bi-check"></i>carpet cleaning <br>
-                                <i class="bi bi-x"></i>bathroom cleaning <br>
-                                <i class="bi bi-x"></i>futniture cleaning <br>
-                            </ul>
-                        </div>
-                        <div>
-                            <a href="" class="btn btn-info text-dark" style=""> <b> Get Started</b></a>
-                        </div>
-                    </div>
+<!--SECTION1-->
+<div class="section1">
+    <section class="flex-content padding_2x">
+        <em class="tag" style="color: #33b5e5;">ABOUT US</em>
+        <br>
+        <h1 class="title medium">We help you to keep your place clean</h1>
+        <p> &nbsp; &nbsp; &nbsp;Maintaining a clean and tidy environment is crucial for promoting well-being and creating a pleasant space. With our assistance, you can effortlessly achieve and uphold a pristine living or working area. We understand the importance of cleanliness and offer a range of services tailored to meet your specific needs. From regular cleaning routines to deep cleaning sessions, our dedicated team employs efficient techniques and high-quality products to ensure every nook and cranny is spotless. Whether it's dusting, vacuuming, mopping floors, sanitizing surfaces, or tackling stubborn stains, we take pride in our meticulous approach. Trust us to handle the cleaning tasks while you focus on what matters most, be it work, relaxation, or spending time with loved ones. Let us help you maintain a clean and inviting space that brings you peace of mind and a sense of harmony.</p>
+    </section>
+    <section class="flex-content padding_2x">
+        <form id="form" class="padding_2x"  method="POST" action="{{ route('app_homecleaningafter')}}">
+            @csrf
+            <h2 class="small">Book a service</h2>
+            @include('alerts.alert-message')
+            <fieldset>
+                <label for="name">Your name</label>
+                <input type="text" name="name" id="fname" maxlength="60" required />
+            </fieldset>
+            <fieldset>
+                <label for="number" id="cno">Contact number</label>
+                <input type="tel" name="number" maxlength="15" required/>
+            </fieldset>
+            <fieldset>
+                <label for="adress" id="zip">Adress</label>
+                <input type="text" name="adress" required />
+            </fieldset>
+            <fieldset>
+                <label for="service">Choose a service</label>
+                <select name="service" id="service" required>
+                    <option value="Carpet Cleaning">Carpet Cleaning</option>
+                    <option value="Window Cleaning">Window Cleaning</option>
+                    <option value="Bathroom Cleaning">Bathroom Cleaning</option>
+                    <option value="Furniture Cleaning">Furniture Cleaning</option>
+                </select>
+            </fieldset>
+            <fieldset id="success" class="button">
+                <button id="form_btn" class="btn2 bg-info" type="submit" value="valider">SUBMIT DETAILS</button>
+            </fieldset>
+        </form>
+    </section>
 
-                    <div class="pricing-item bg-body-tertiary">
-                        <div class="pricing-header">
-                            <h3>satndard</h3>
-                            <div class="price"><span>$49</span>montly</div>
-                        </div>
-                        <div class="pricing-body">
-                            <ul>
-                                <i class="bi bi-check"></i>Window Cleaning <br>
-                                <i class="bi bi-check"></i>Carpet Cleaning <br>
-                                <i class="bi bi-check"></i>Bathroom Cleaning <br>
-                                <i class="bi bi-x"></i>Futniture Cleaning <br>
-                            </ul>
-                        </div>
-                        <div>
-                            <a href="" class="btn btn-info text-dark" style=""> <b> Get Started</b></a>
-                        </div>
-                    </div>
+</div>
 
-                    <div class="pricing-item bg-body-tertiary">
-                        <div class="pricing-header">
-                            <h3>premium</h3>
-                            <div class="price"><span>$89</span>montly</div>
-                        </div>
-                        <div class="pricing-body">
-                            <ul>
-                                <i class="bi bi-check"></i>window cleaning <br>
-                                <i class="bi bi-check"></i>carpet cleaning <br>
-                                <i class="bi bi-check"></i>bathroom cleaning <br>
-                                <i class="bi bi-check"></i>futniture cleaning <br>
-                            </ul>
-                        </div>
-                        <div>
-                            <a href="" class="btn btn-info text-dark" style=""> <b> Get Started</b></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!--SECTION2-->
+<div class="sections section2 padding_2x">
+    <article class="cards padding_2x">
+        <section class="flex-content padding_2x">
+            <figure>
+                <img src="{{asset('images/01.png')}}" alt="" loading="lazy">
+            </figure>
+            <h2 class="title small">Pick a service</h2>
+            <p>You can choose from a variety of services tailored to your specific cleaning needs.</p>
         </section>
+        <section class="flex-content padding_2x">
+            <figure>
+                <img src="{{asset('images/02.png')}}" alt="" loading="lazy">
+                <h2 class="title small">Schedule with us</h2>
+            <p>Schedule with us and let us assist you in organizing your appointments and managing your time effectively.</p>
+            </figure>
+        </section>
+        <section class="flex-content padding_2x">
+            <figure>
+                <img src="{{asset('images/03.png')}}" alt="" loading="lazy">
+                <h2 class="title small">Get things done</h2>
+            <p>Get things done efficiently and effectively with our assistance, ensuring that your tasks are completed promptly and your goals are accomplished.</p>
+            </figure>
+        </section>
+    </article>
+</div>
+<!--SECTION3-->
+<div class="section3 padding_2x">
+    <div class="tag style="color: #33b5e5;">
+        <em>OUR RECENT WORKS <br> <br> <br> <br><br><br></em>
+        <h1 class="title medium" style="padding-left: 0;">Quality Service</h1>
+    </div>
+    <div class="flex">
+    <section class="flex-content padding_1x">
+        <figure>
+            <img src="{{asset('images/01.jpg')}}" alt="">
+            <article>
+                <span class="padding_1x">
+                    <h2 class="cursive">Furniture Cleaning</h2>
+                    <p>Revitalize your home or office with our professional furniture cleaning service, restoring the beauty and freshness of your beloved furniture pieces.</p>
+                </span>
+            </article>
+        </figure>
     </section>
+    <section class="flex-content padding_1x">
+        <figure>
+            <img src="{{asset('images/02.jpg')}}" alt="">
+            <article>
+                <span class="padding_1x">
+                    <h2 class="cursive">Bathroom Cleaning</h2>
+                    <p>Experience the ultimate cleanliness and hygiene with our meticulous bathroom cleaning service, leaving your bathroom sparkling, sanitized, and ready for your utmost comfort.</p>
+                </span>
+            </article>
+        </figure>
+    </section>
+    <section class="flex-content padding_1x">
+        <figure>
+            <img src="{{asset('images/03.jpg')}}" alt="">
+            <article>
+                <span class="padding_1x">
+                    <h2 class="cursive">Windows Cleaning</h2>
+                    <p>
+                        Transform the appearance of your space with our impeccable window cleaning service, allowing natural light to flood in and providing you with a crystal-clear view of the world outside.</p>
+                </span>
+            </article>
+        </figure>
+    </section>
+    <section class="flex-content padding_1x">
+        <figure>
+            <img src="{{asset('images/04.jpg')}}" alt="">
+            <article>
+                <span class="padding_1x">
+                    <h2 class="cursive">Carpet Cleaning</h2>
+                    <p>Restore the beauty and freshness of your carpets with our top-notch carpet cleaning service, eliminating deep-seated dirt, stains, and allergens, and leaving your carpets looking and feeling as good as new.</p>
+                </span>
+            </article>
+        </figure>
+    </section>
+    </div>
+</div>
+<div class="sub_footer">
+<p> 2023 © All rights reserved by {TDI ENSA-BM}</p>
+</div>
+
 @endsection
-
 <style>
-    .home{
-        padding: 100px 0 60px;
+:root{
+    scrollbar-color: rgb(210,210,210) rgb(46,54,69) !important;
+    scrollbar-width: thin !important;
+    --white:#fff;
+    --black:#131417;
+    --dark:#131313;
+    --gray:rgba(255,255,255,0.6);
+    --lite:rgba(1,1,1,0.6);
+    --cream:#f9f9f9;
+    --primary:#33b5e5;
+    --primary_lite:#ff3e55;
+    --secondary:#6382f7;
+    --secondary_dark: #c8ebf8;
+    --blue:#051135;
+    --default:'Mukta', sans-serif;
+    --title:'Montserrat', sans-serif;
+    --cursive:'Dancing Script', cursive;
+}
+body{
+    margin:0;
+    overflow-x:hidden !important;
+    font-family:var(--default);
+}
+em{
+    font-style:normal;
+    color:var(--primary);
+}
+ul{
+    padding:0;
+    margin:0;
+}
+figure{
+    padding:0;
+    margin:0;
+}
+fieldset{
+    border:0;
+}
+.flex{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.flex-content{
+    width:100%;
+    position:relative;
+}
+.title{
+    font-family:var(--title);
+    color:var(--blue);
+}
+.cursive{
+    font-family:var(--cursive);
+}
+.padding_1x{
+    padding:1rem;
+}
+.padding_2x{
+    padding:2rem;
+}
+.padding_3x{
+    padding:3rem;
+}
+.big{
+    font-size:4em;
+}
+.medium{
+    font-size:2.5rem;
+}
+.small{
+    font-size:1.5em;
+}
+.tag{
+    color: #33b5e5;
+    display:flex;
+    align-items:center;
+    transition:0.5s;
+    position:relative;
+    padding-left:3.5rem;
+}
+ .btn2 .fa{
+    position:relative;
+    left:0.4rem;
+}
+.btn2{
+    padding:1rem 1.5rem;
+    border:0;
+    border-radius:5px;
+    color:var(--white);
+    font-weight:500;
+    text-transform:uppercase;
+    width:100%;
+    background-color:var(--secondary);
+    padding:0.8rem 2rem;
+    display:block;
+    border:1px solid var(--secondary);
+    font-weight:600;
+}
+btn2:hover{
+    background-color:var(--secondary_dark);
+    border:1px solid var(--secondary_dark);
+}
+@media (max-width:1280px){
+    .big{
+        font-size:1.8em;
     }
-    h1, h2, h3, h4, h5, h6{
-        color: darkgray;
-        line-height: 1.3;
+    .medium{
+        font-size:1.4em;
     }
-    p{
-        margin-bottom: 15px;
+    .small{
+        font-size:1.2em;
     }
-    img{
-        max-width: 100%;
-        vertical-align: middle;
+}
+@media (max-width:920px){
+    .big{
+        font-size:1.8em;
     }
-    .home-img, .home-text{
-        grid-column: span 6;
+    .medium{
+        font-size:1.4em;
     }
-    .grid{
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        gap: 30px;
+    .small{
+        font-size:1.2em;
     }
-    .home-text h1{
-        margin: 0 0 20px;
-        text-transform: capitalize;
+    .flex{
+        flex-wrap:wrap;
     }
-    .home-text p{
-        margin: 0 0 30px;
+    .padding_1x, .padding_2x, .padding_3x{
+        padding:1rem;
     }
-    .home-img  .circle-wrap{
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        z-index: -1;
+    .btn2{
+        padding:0.5rem 1rem;
     }
-    .home-img  .circle{
-        height: 350px;
-        width: 350px;
-        background-color: #33b5e5;
-        border-radius: 50% ;
-        transform: translate(250px, -100px);
+}
+main{
+    width:100%;
+    position:relative;
+    background:linear-gradient(to right, #33b5e5 10%, rgba(214, 233, 247, 0.7) 50%, rgba(31, 28, 88, 0.1) 100%),url("https://i.postimg.cc/LsKfRM3Q/main.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    color:var(--white);
+    padding-bottom:6rem;
+}
+main .title{
+    font-weight:200;
+    color:var(--white);
+}
+main em{
+    color:var(--white);
+    font-weight:400;
+}
+main p{
+    position:relative;
+    top:-30px;
+    font-weight:400;
+    color:var(--gray);
+}
+@media (max-width:920px){
+    main p{
+        top:-10px;
     }
-    .home-img{
-        max-width: 270px;
-        display: block;
-        margin: auto;
-    }
-    .about-img, .about-text{
-        grid-column: span 6;
-    }
-    .section-padding{
-        padding: 60px 0;
-    }
-    .section-title{
-        text-align: center;
-        margin-bottom: 45px;
-    }
-    .section-title .title{
-        display: inline-block;
-        font-weight: 400;
-        text-transform: capitalize;
-        margin: 0 0 12px;
-        padding: 0 40px;
-        color: #33b5e5;
-        position: relative;
-    }
-    .section-title .sub-title{
-        text-transform: capitalize;
-    }
-    .about .section-title{
-        text-align: left;
-        margin: 0 0 15px;
-    }
-    .about-img .img-box{
-        width: 400px;
-        margin: auto;
-        padding: 15px;
-        border-radius: 50%;
-        background-color: rgb(221, 236, 241);
-        position: relative;
-    }
-    .about-img .img-box img{
-        border-radius: 50%;
-    }
-    .about-img .box{
-        height: 100x;
-        width: 100px;
-        background-color: #33b5e5;
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        border-radius: 0 40px;
-        padding: 15px;
-    }
-    .about-img .box-l{
-        top: 50%;
-        left: 0;
-        transform: translate(-50%, -50%);
-    }
-    .about-img .box span{
-        color: white;
-        font-weight: bold;
-        margin: 0 0 3px;
-        line-height: 1;
-    }
-    .about-img .box p{
-        text-transform: uppercase;
-        color: rgb(247, 246, 246);
-        margin: 0;
-    }
-    .services-item{
-        grid-column: span 3;
-        text-align: center;
-        padding: 50px;
-    }
-    .services-item .img-box{
-        height: 140px;
-        width: 140 px;
-        border-radius: 50%;
-        margin: auto 20px;
-        padding: 8px;
-    }
-    .services-item .img-box img{
-        border-radius: 50%;
-        transition: transform 0.5s ease;
-    }
-    .services-item:hover .img-box img{
-        transform: scale(1.5);
-    }
-    .grid-item{
-        width: 100%;
-    }
-    .services-item h3{
-        text-transform: capitalize;
-        font-weight: 500;
-    }
-    .pricing-item{
-        grid-column: span 4;
-        padding: 30px;
-        border-radius: 10px;
-        text-align: center;
-    }
-    .pricing-header h3{
-        text-transform: capitalize;
-        margin: 0 0 0px;
-        font-weight: 600;
-    }
-    .pricing-header .price{
-        height: 100px;
-        width: 140px;
-        margin: auto;
-        border-radius: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-shadow: inset lightblue;
-        justify-content: center;
-        text-transform: capitalize;
-    }
-    .pricing-header .price span{
-        font-size: 150%;
-        font-weight: bold;
-        color: #33b5e5;
-        line-height: 1.3;
-    }
-    .pricing-body{
-        padding: 30px 0;
-        text-align: left;
+}
+.section1{
+    display:flex;
+    align-items:top !important;
+}
+.section1 em{
+    color:var(--dark);
+    top:20px;
+}
+.section1 p{
+    color:var(--lite);
+}
+.section1 form{
+    background-color:var(--white);
+    position:relative;
+    top:-20vh;
+    box-shadow:0 20px 60px -10px rgba(0,0,0,.1);
+    border-radius:10px;
+}
+form .small{
+    text-align:center;
+}
+form input, form select{
+    background-color: #f7f7f7;
+    color: #001837;
+    width: 100%;
+    font-weight: normal;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    height: 48px;
+    line-height: 48px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    padding: 10px;
+    transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+}
+@media (max-width:920px){
+    .section1{
+        flex-wrap:wrap;
     }
 
+    .section1 em{
+        top:10px;
+    }
+
+    form input, form select{
+        height:38px;
+    }
+
+    .section1 form{
+        top:0;
+    }
+}
+.section2{
+    background:linear-gradient(to right, #33b5e5 10%, rgba(214, 233, 247, 0.7) 50%, rgba(31, 28, 88, 0.1) 100%),url("https://i.postimg.cc/BZrmYtjR/bg-1.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    color: white;
+    position:relative;
+    top:-10vh;
+}
+.section2 p{
+    color:rgb(242, 247, 248);
+}
+.section2 .cards{
+    display:flex;
+    align-items:top !important;
+    justify-content:center;
+}
+.section2 .flex-content figure{
+    position:relative;
+}
+.section2 .flex-content .title{
+    color:var(--white);
+}
+.section2 .flex-content:not(:last-child) figure::after{
+    content:"";
+    background-image:url("https://i.postimg.cc/7LBXbLm6/arrow.png");
+    background-size:100% 100%;
+    background-position:top center;
+    position:absolute;
+    top:0;
+    width:90%;
+    filter:brightness(0) invert(1);
+    height:50px;
+}
+.section2 .flex-content:nth-child(1) figure::after{
+    top:-10%;
+}
+.section2 .flex-content:nth-child(2) figure::after{
+    left:25%;
+    top:10%;
+}
+.section2 .flex-content:nth-child(odd) figure::after{
+    -webkit-transform:rotateX(180deg);
+    transform:rotateX(180deg);
+}
+.section2 .flex-content figure img{
+    filter:brightness(0) invert(1);
+}
+@media (max-width:920px){
+    .section2{
+        top:0;
+    }
+    .section2 .cards{
+        flex-wrap:wrap;
+    }
+    .section2, .section2 .flex-content{
+        padding:0 !important;
+    }
+    .section2 .flex-content:not(:last-child) figure::after{
+        display:none;
+    }
+}
+.section3{
+    background-image:url("#");
+    background-size:cover;
+}
+.section3 section{
+    transition:0.5s;
+}
+.section3 figure{
+    position:relative;
+    overflow:hidden;
+    height:60vh;
+}
+.section3 figure img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+}
+.section3 section:nth-child(odd) figure{
+    margin-top:-2rem;
+}
+.section3 section:nth-child(even) figure{
+    margin-top:8rem;
+}
+.section3 article{
+    position:absolute;
+    top:100%;
+    background-color:rgba(1,1,1,0.4);
+    width:100%;
+    height:100%;
+    z-index:1;
+    transition:0.5s;
+}
+.section3 article span{
+    display:block;
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:-100%;
+    transition:0.5s;
+    transition-delay:0.5s;
+}
+.section3 figure:hover article{
+    top:0%;
+}
+.section3 figure:hover article span{
+    left:0;
+}
+.section3 h2, .section3 p{
+    color:var(--white);
+}
+@media (max-width:920px){
+    .section3 figure{
+        height:30vh;
+    }
+    .section3 section{
+        margin:0px 0;
+    }
+    .section3 section:nth-child(odd) figure{
+        margin-top:0rem;
+    }
+    .section3 section:nth-child(even) figure{
+        margin-top:0rem;
+    }
+}
+
+/*FOOTER*/
+.sub_footer{
+    background-color:var(--secondary_dark);
+    text-align:center;
+    color:var(--black);
+    padding:0.01rem;
+}
 </style>

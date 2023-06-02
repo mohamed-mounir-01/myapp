@@ -37,6 +37,7 @@ class CreateNewUser implements CreatesNewUsers
         $activation_token = md5(uniqid()) . $email . sha1($email);
 
         $activation_code = "";
+        $is_admin = $input['is_admin'];
         $length_code = 5;
         for($i = 0; $i < $length_code; $i++)
             {
@@ -53,6 +54,7 @@ class CreateNewUser implements CreatesNewUsers
             'name' => $name,
             'email' => $email,
             'password' => Hash::make($input['password']),
+            'is_admin' => $is_admin,
             'activation_code' =>$activation_code,
             'activation_token' =>$activation_token,
         ]);

@@ -53,6 +53,14 @@
                   </p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="{{url('booking')}}" class="nav-link">
+                  <i class="nav-icon fas fa-th"></i>
+                  <p>
+                    Booking
+                  </p>
+                </a>
+              </li>
             <li class="nav-item">
                 <a href="{{url('inbox')}}" class="nav-link">
                   <i class="nav-icon far fa-envelope"></i>
