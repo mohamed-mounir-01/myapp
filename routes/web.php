@@ -33,7 +33,7 @@ Route::controller(Homecontroller::class)->group(function(){
     Route::get('/inbox', 'inbox')->name('inbox');
     Route::get('/compose', 'compose')->name('compose');
     Route::get('/booking', 'booking')->name('booking');
-    Route::post('/booking', 'booking')->name('booking');
+    Route::post('/booking', 'bookingafter')->name('bookingafter');
     Route::get('/store', 'store')->name('store');
     Route::post('/store', 'store')->name('store');
 });

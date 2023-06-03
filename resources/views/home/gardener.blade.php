@@ -30,7 +30,7 @@
             Maintaining a clean and beautiful garden can be a daunting task, but we're here to help. Our team specializes in garden cleaning services, ensuring that your outdoor space remains pristine and inviting. From removing debris and fallen leaves to trimming overgrown plants, we take care of all the necessary tasks to keep your garden looking its best. We also provide weed control, lawn mowing, and general maintenance services, tailored to your specific needs. With our expertise and attention to detail, you can relax and enjoy your garden without the hassle of the cleanup. Let us take care of the dirty work so that you can fully appreciate the natural beauty of your outdoor sanctuary.</p>
     </section>
     <section class="flex-content padding_2x">
-        <form id="form" class="padding_2x"  method="POST" action="{{ route('booking')}}">
+        <form id="form" class="padding_2x"  method="POST" action="{{ route('bookingafter')}}">
             @csrf
             <h2 class="small">Book a service</h2>
             @include('alerts.alert-message')

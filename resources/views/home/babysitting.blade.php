@@ -29,7 +29,7 @@
         <p> &nbsp; &nbsp; &nbsp; Our team of experienced professionals is committed to creating a safe and nurturing environment for your babies, whether it's in our childcare center or through our personalized in-home services. We offer a range of services, including feeding, diaper changing, bathing, and engaging activities that promote their physical, cognitive, and emotional development. With our reliable and compassionate care, you can have peace of mind knowing that your babies are in capable hands. We prioritize open communication and work closely with you to understand your unique needs and preferences, tailoring our approach to suit your family's dynamics. We are here to support you every step of the way, ensuring that your babies receive the love and attention they deserve while you attend to your other responsibilities or take some well-deserved rest. Your babies are our top priority, and we are honored to be a part of their journey as they grow and thrive.</p>
     </section>
     <section class="flex-content padding_2x">
-        <form id="form" class="padding_2x" method="POST" action="{{ route('booking')}}"">
+        <form id="form" class="padding_2x" method="POST" action="{{ route('bookingafter')}}">
             @csrf
             <h2 class="small">Book a service</h2>
             @include('alerts.alert-message')

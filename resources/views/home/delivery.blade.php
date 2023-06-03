@@ -29,7 +29,7 @@
         <p> &nbsp; &nbsp; &nbsp;Experienced and dedicated professional specializing in delivery home services. Adept at managing the end-to-end process of delivering a wide range of products and services to homeowners, ensuring timely and efficient service. Highly organized with excellent logistical skills, capable of coordinating multiple deliveries and optimizing routes to maximize efficiency. Skilled in maintaining clear communication with customers, addressing inquiries, and resolving any issues that may arise during the delivery process. Strong attention to detail and commitment to customer satisfaction, ensuring that each delivery is completed accurately and meets the highest standards. Committed to providing exceptional service and contributing to a seamless and convenient experience for homeowners utilizing delivery home services.</p>
     </section>
     <section class="flex-content padding_2x">
-        <form id="form" class="padding_2x" method="POST" action="{{ route('booking')}}">
+        <form id="form" class="padding_2x" method="POST" action="{{ route('bookingafter')}}">
             @csrf
             <h2 class="small">Book a service</h2>
             @include('alerts.alert-message')

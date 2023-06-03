@@ -42,15 +42,16 @@ CONTROL PANEL
                 </tr>
                 </thead>
                 <tbody>
-
+                    @foreach($liste as $e)
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+
+                    <td>{{$e->name}}</td>
+                    <td>{{$e->number}}</td>
+                    <td>{{$e->adress}}</td>
+                    <td>{{$e->service}}</td>
 
                 </tr>
-
+                @endforeach
 
 
                 </tbody>

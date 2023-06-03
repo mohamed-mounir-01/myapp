@@ -20,16 +20,37 @@ CONTROL PANEL
 
 @section('content')
 <!-- Main content -->
-<section class="content">
+ <!-- Main content -->
+ <section class="content">
     <div class="container-fluid">
       <div class="row">
+
+            @if (session()->has('Add'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>{{session()->get('Add')}}</strong>
+                        <button type="button"class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+            @endif
+            @if (session()->has('Error'))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>{{session()->get('Error')}}</strong>
+                        <button type="button"class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+            @endif
+
         <div class="col-12">
+
+
             <section class="content">
                 <div class="container-fluid">
                     <div class="card-body">
 
                         <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-lg">
-                          Add a client
+                          Add a service provider
                         </button>
 
                         <br />
@@ -44,48 +65,49 @@ CONTROL PANEL
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h4 class="modal-title">Add a client</h4>
+                        <h4 class="modal-title">Add a service provider</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
+                      <form action="{{route('store')}}" method="POST" id="form">
+                        {{-- {{csrf_field()}} --}}
+                         @csrf
                       <div class="modal-body">
-
                         <div class="card-body">
                             <div class="row">
                               <div class="col-md-6">
 
                               <!-- /.col -->
                               <div class="card-body">
-                                <label>First name</label>
-                                <input class="form-control form-control-lg" type="text" placeholder="First name">
+                                <label for="first_name">First name</label>
+                                <input class="form-control form-control-lg" type="text" placeholder="First name" name="first_name" id="first_name">
                                 <br>
-                                <label>Second name</label>
-                                <input class="form-control form-control-lg" type="text" placeholder="Second name">
+                                <label for="second_name">Second name</label>
+                                <input class="form-control form-control-lg" type="text" placeholder="Second name" name="second_name" id="second_name">
                                 <br>
-                                <label>Email</label>
-                                <input class="form-control form-control-lg" type="text" placeholder="Email">
+                                <label for="email">Email</label>
+                                <input class="form-control form-control-lg" type="text" placeholder="Email" name="email" id="email">
                                 <br>
-                                <label>Adress</label>
-                                <input class="form-control form-control-lg" type="text" placeholder="Adress">
+                                <label for="adress">Adress</label>
+                                <input class="form-control form-control-lg" type="text" placeholder="Adress" name="adress" id="adress">
                                 <br>
-                                <label>City</label>
-                                <input class="form-control form-control-lg" type="text" placeholder="City">
+                                <label for="city">City</label>
+                                <input class="form-control form-control-lg" type="text" placeholder="City" name="city" id="city">
                                 <br>
-                                <label>Zip code</label>
-                                <input class="form-control form-control-lg" type="text" placeholder="Zip code">
+                                <label for="zip">Zip code</label>
+                                <input class="form-control form-control-lg" type="text" placeholder="Zip code" name="zip" id="zip">
                               </div>
                                 <!-- /.form-group -->
                                 <div class="form-group" style="padding-left:0.5cm;">
-                                  <label>Services</label>
-                                  <select class="form-control select2" style="width: 100%;">
-                                    <option> </option>
-                                    <option>Home cleaning</option>
-                                    <option>Baby sitting</option>
-                                    <option>Home repair</option>
-                                    <option>Gardener</option>
-                                    <option>Delivery</option>
-                                    <option>Health</option>
+                                  <label for="services">Services</label>
+                                  <select class="form-control select2" style="width: 100%;" name="services" id="services">
+                                    <option value="Home cleaning">Home cleaning</option>
+                                    <option value="Babysitting">Babysitting</option>
+                                    <option value="Home repair">Home repair</option>
+                                    <option value="Gardener">Gardener</option>
+                                    <option value="Delivery">Delivery</option>
+                                    <option value="Health">Health</option>
                                   </select>
                                 </div>
                                 <!-- /.form-group -->
@@ -94,28 +116,14 @@ CONTROL PANEL
                             </div>
                             <!-- /.row -->
 
-                            <div class="row">
-                              <div class="col-12 col-sm-6">
-                                <div class="form-group" style="padding-left:0.5cm;">
-                                  <label>Plans</label>
-                                  <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" style="width: 100%;">
-                                    <option> </option>
-                                    <option>Basic</option>
-                                    <option>Standard</option>
-                                    <option>Premium</option>
-                                  </select>
-                                </div>
-                                <!-- /.form-group -->
-                              </div>
 
-                            </div>
-                            <!-- /.row -->
                           </div>
                       </div>
                       <div class="modal-footer justify-content-between">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-success" >Save changes</button>
                       </div>
+                      </form>
 
                     </div>
                     <!-- /.modal-content -->
@@ -128,33 +136,38 @@ CONTROL PANEL
 
               </section>
           <div class="card">
-
-          <!-- /.card -->
-
-          <div class="card">
-
             <!-- /.card-header -->
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
+                  <th>#</th>
+                  <th>First name</th>
+                  <th>Second name</th>
+                  <th>Email</th>
+                  <th>Adress</th>
+                  <th>City</th>
+                  <th>Zip code</th>
+                  <th>Service</th>
                 </tr>
                 </thead>
                 <tbody>
+
                 <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
                 </tr>
+
+
+
+                </tbody>
 
               </table>
             </div>

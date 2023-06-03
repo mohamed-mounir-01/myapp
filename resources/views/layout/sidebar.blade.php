@@ -69,6 +69,14 @@
                   </p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="{{url('compose')}}" class="nav-link">
+                  <i class="nav-icon far fa-envelope"></i>
+                  <p>
+                    Compose
+                  </p>
+                </a>
+              </li>
 
               </ul>
             </li>

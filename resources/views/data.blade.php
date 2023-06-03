@@ -153,19 +153,21 @@ Les données des clients
                 </tr>
                 </thead>
                 <tbody>
-
+                    @foreach($liste as $e)
                 <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+
+
+                    <td>{{$e->id}}</td>
+                    <td>{{$e->first_name}}</td>
+                    <td>{{$e->second_name}}</td>
+                    <td>{{$e->email}}</td>
+                    <td>{{$e->adress}}</td>
+                    <td>{{$e->city}}</td>
+                    <td>{{$e->zip}}</td>
+                    <td>{{$e->services}}</td>
 
                 </tr>
-
+                @endforeach
 
 
                 </tbody>

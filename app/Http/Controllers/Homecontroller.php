@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\contact;
-use App\Models\booking;
 use App\Models\data;
+use App\Models\booking;
+use App\Models\contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class Homecontroller extends Controller
 {
@@ -33,7 +34,9 @@ public function dashboard()
 }
 public function data()
 {
-    return view('data');
+    $liste = DB::select('select * from data ');
+    return view('data',compact('liste'));
+
 }
 public function data2()
 {
@@ -49,7 +52,8 @@ public function compose()
 }
 public function booking()
 {
-    return view('booking');
+    $liste = DB::select('select * from bookings ');
+    return view('booking',compact('liste'));
 }
 
 //La page/vue contactus.blade.php
@@ -72,7 +76,7 @@ public function contactusafter(Request $request)
     $table->save();
     return redirect()->route('app_contactusbefore')->with('success', 'Message sent!');
 }
-public function store(Request $request){{
+public function store(Request $request){
         $validateData = $request->validate([
 
             'first_name' => 'required',
@@ -97,7 +101,6 @@ public function store(Request $request){{
         return redirect()->route('data')->with('success', 'Details sent!');
     }
 
-}
 //La page/vue homecleaning.blade.php
 public function homecleaning()
 {
@@ -141,8 +144,9 @@ public function adminhome()
 {
     return view('home.dashboard');
 }
-public function booking(Request $request){{
+public function bookingafter(Request $request){
     $validateData = $request->validate([
+
         'name' => 'required',
         'number' => 'required',
         'adress' => 'required',
@@ -154,12 +158,11 @@ public function booking(Request $request){{
     $table->number = $request->number;
     $table->adress = $request->adress;
     $table->service = $request->service;
+
     $table->save();
     return redirect()->route('app_home');
 }
-public function adminhome()
-{
-    return view('home.dashboard');
-}
+
+
 
 }

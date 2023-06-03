@@ -15,7 +15,7 @@
             <li>
                 <!--bouton services-->
                 <div class="btn-group">
-                    @guest
+
                         <button class="btn btn-default dropdown-toggle" type="button"  data-toggle="dropdown" >
                             Services
                         </button>
@@ -27,8 +27,13 @@
                             <li><a class="dropdown-item" href=" {{ route('app_delivery')}}">Delivery</a></li>
                             <li><a class="dropdown-item" href="{{ route('app_health')}}">Health</a></li>
                         </ul>
-                    @endguest
+
                 </div>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link @if(Request::route()->getName() == 'app_contactusbefore') active @endif" aria-current="page" href="{{route('app_contactusbefore')}}">Contact Us</a>
             </li>
         </ul>
       </div>
@@ -47,11 +52,19 @@
                 <button class="btn btn-default dropdown-toggle" type="button"  data-toggle="dropdown" >
                     {{ Auth::user()->name}}
                 </button>
+                @if(auth()->user()->is_admin=='1')
                 <ul class="dropdown-menu" >
                     <li><a class="dropdown-item" href="{{route('app_logout')}}">Logout</a></li>
                     <li><a class="dropdown-item" href="{{route('app_dashboard')}}">Dashboard</a></li>
                 </ul>
+                @else
+                <ul class="dropdown-menu" >
+                    <li><a class="dropdown-item" href="{{route('app_logout')}}">Logout</a></li>
+
+                </ul>
+                @endif
             @endauth
+
 
       </div>
 
