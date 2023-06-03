@@ -42,20 +42,16 @@ CONTROL PANEL
                 </tr>
                 </thead>
                 <tbody>
-                    <?php $i=0; ?>
 
-                    @foreach ($gardenerafter as $client)
-
-                    <?php $i++; ?>
                 <tr>
-                    <td>{{$i}}</td>
-                    <td>{{$client->name}}</td>
-                    <td>{{$client->number}}</td>
-                    <td>{{$client->adress}}</td>
-                    <td>{{$client->service}}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
                 </tr>
 
-                    @endforeach
+
 
                 </tbody>
 

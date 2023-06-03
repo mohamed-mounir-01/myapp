@@ -29,7 +29,7 @@
         <p> &nbsp; &nbsp; &nbsp;At our company, our utmost priority is your health and well-being. We are dedicated to providing tailored health services that are designed to meet your specific needs and support you in achieving a healthy lifestyle. Whether you require preventive care, medical consultations, personalized treatment plans, or guidance on maintaining a healthy routine, our team of experts is here to assist you every step of the way. We understand that each individual is unique, which is why we strive to deliver personalized and comprehensive care to ensure optimal health outcomes. With our commitment to promoting well-being and a healthy lifestyle, we aim to empower you to take control of your health and live your best life.</p>
     </section>
     <section class="flex-content padding_2x">
-        <form id="form" class="padding_2x"method="POST" action="{{ route('app_healthafter')}}">
+        <form id="form" class="padding_2x"method="POST" action="{{ route('booking')}}">
             @csrf
             <h2 class="small">Book a service</h2>
             @include('alerts.alert-message')

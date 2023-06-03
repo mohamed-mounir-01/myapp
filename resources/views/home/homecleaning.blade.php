@@ -29,7 +29,7 @@
         <p> &nbsp; &nbsp; &nbsp;Maintaining a clean and tidy environment is crucial for promoting well-being and creating a pleasant space. With our assistance, you can effortlessly achieve and uphold a pristine living or working area. We understand the importance of cleanliness and offer a range of services tailored to meet your specific needs. From regular cleaning routines to deep cleaning sessions, our dedicated team employs efficient techniques and high-quality products to ensure every nook and cranny is spotless. Whether it's dusting, vacuuming, mopping floors, sanitizing surfaces, or tackling stubborn stains, we take pride in our meticulous approach. Trust us to handle the cleaning tasks while you focus on what matters most, be it work, relaxation, or spending time with loved ones. Let us help you maintain a clean and inviting space that brings you peace of mind and a sense of harmony.</p>
     </section>
     <section class="flex-content padding_2x">
-        <form id="form" class="padding_2x"  method="POST" action="{{ route('app_homecleaningafter')}}">
+        <form id="form" class="padding_2x"  method="POST" action="{{ route('booking')}}">
             @csrf
             <h2 class="small">Book a service</h2>
             @include('alerts.alert-message')

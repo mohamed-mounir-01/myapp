@@ -73,7 +73,7 @@ Les données des clients
                       </div>
                       <form action="{{route('store')}}" method="POST" id="form">
                         {{-- {{csrf_field()}} --}}
-                        @csrf
+                         @csrf
                       <div class="modal-body">
                         <div class="card-body">
                             <div class="row">
@@ -81,35 +81,34 @@ Les données des clients
 
                               <!-- /.col -->
                               <div class="card-body">
-                                <label>First name</label>
-                                <input class="form-control form-control-lg" type="text" placeholder="First name">
+                                <label for="first_name">First name</label>
+                                <input class="form-control form-control-lg" type="text" placeholder="First name" name="first_name" id="first_name">
                                 <br>
-                                <label>Second name</label>
-                                <input class="form-control form-control-lg" type="text" placeholder="Second name">
+                                <label for="second_name">Second name</label>
+                                <input class="form-control form-control-lg" type="text" placeholder="Second name" name="second_name" id="second_name">
                                 <br>
-                                <label>Email</label>
-                                <input class="form-control form-control-lg" type="text" placeholder="Email">
+                                <label for="email">Email</label>
+                                <input class="form-control form-control-lg" type="text" placeholder="Email" name="email" id="email">
                                 <br>
-                                <label>Adress</label>
-                                <input class="form-control form-control-lg" type="text" placeholder="Adress">
+                                <label for="adress">Adress</label>
+                                <input class="form-control form-control-lg" type="text" placeholder="Adress" name="adress" id="adress">
                                 <br>
-                                <label>City</label>
-                                <input class="form-control form-control-lg" type="text" placeholder="City">
+                                <label for="city">City</label>
+                                <input class="form-control form-control-lg" type="text" placeholder="City" name="city" id="city">
                                 <br>
-                                <label>Zip code</label>
-                                <input class="form-control form-control-lg" type="text" placeholder="Zip code">
+                                <label for="zip">Zip code</label>
+                                <input class="form-control form-control-lg" type="text" placeholder="Zip code" name="zip" id="zip">
                               </div>
                                 <!-- /.form-group -->
                                 <div class="form-group" style="padding-left:0.5cm;">
-                                  <label>Services</label>
-                                  <select class="form-control select2" style="width: 100%;">
-                                    <option> </option>
-                                    <option>Home cleaning</option>
-                                    <option>Baby sitting</option>
-                                    <option>Home repair</option>
-                                    <option>Gardener</option>
-                                    <option>Delivery</option>
-                                    <option>Health</option>
+                                  <label for="services">Services</label>
+                                  <select class="form-control select2" style="width: 100%;" name="services" id="services">
+                                    <option value="Home cleaning">Home cleaning</option>
+                                    <option value="Babysitting">Babysitting</option>
+                                    <option value="Home repair">Home repair</option>
+                                    <option value="Gardener">Gardener</option>
+                                    <option value="Delivery">Delivery</option>
+                                    <option value="Health">Health</option>
                                   </select>
                                 </div>
                                 <!-- /.form-group -->
@@ -118,22 +117,7 @@ Les données des clients
                             </div>
                             <!-- /.row -->
 
-                            <div class="row">
-                              <div class="col-12 col-sm-6">
-                                <div class="form-group" style="padding-left:0.5cm;">
-                                  <label>Plans</label>
-                                  <select class="form-control select2 select2-danger" data-dropdown-css-class="select2-danger" style="width: 100%;">
-                                    <option> </option>
-                                    <option>Basic</option>
-                                    <option>Standard</option>
-                                    <option>Premium</option>
-                                  </select>
-                                </div>
-                                <!-- /.form-group -->
-                              </div>
 
-                            </div>
-                            <!-- /.row -->
                           </div>
                       </div>
                       <div class="modal-footer justify-content-between">
@@ -166,28 +150,23 @@ Les données des clients
                   <th>City</th>
                   <th>Zip code</th>
                   <th>Service</th>
-                  <th>Plan</th>
                 </tr>
                 </thead>
                 <tbody>
-                    <?php $i=0; ?>
 
-                    @foreach ($data as $client)
-
-                    <?php $i++; ?>
                 <tr>
-                    <td>{{$i}}</td>
-                    <td>{{$client->first_name}}</td>
-                    <td>{{$client->second_name}}</td>
-                    <td>{{$client->email}}</td>
-                    <td>{{$client->adress}}</td>
-                    <td>{{$client->city}}</td>
-                    <td>{{$client->code_postal}}</td>
-                    <td>{{$client->service}}</td>
-                    <td>{{$client->plan}}</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
                 </tr>
 
-                    @endforeach
+
 
                 </tbody>
 

@@ -29,7 +29,7 @@
         <p> &nbsp; &nbsp; &nbsp; When it comes to repairing your home, our dedicated team is here to help. We understand that unexpected damages or wear and tear can occur, causing inconvenience and stress. That's why we offer comprehensive home repair services to address a wide range of issues. From fixing leaky pipes and electrical repairs to patching up walls and repairing damaged floors, we have the expertise to handle various repair tasks efficiently and effectively. Our skilled professionals use quality materials and tools to ensure lasting results, restoring your home to its optimal condition. We prioritize clear communication, understanding your specific repair needs, and providing transparent cost estimates before starting any work. Whether it's a minor fix or a major renovation, trust us to deliver exceptional repair services, giving you peace of mind and a safe, comfortable living space once again. Let us take care of the repairs while you focus on enjoying your home.</p>
     </section>
     <section class="flex-content padding_2x">
-        <form id="form" class="padding_2x" method="POST" action="{{ route('app_homerepairafter')}}">
+        <form id="form" class="padding_2x" method="POST" action="{{ route('booking')}}">
             @csrf
             <h2 class="small">Book a service</h2>
             @include('alerts.alert-message')

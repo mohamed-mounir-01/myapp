@@ -18,9 +18,8 @@ return new class extends Migration
             $table->string('email');
             $table->text('adress');
             $table->string('city');
-            $table->integer('code_postal');
-            $table->string('service');
-            $table->string('plan');
+            $table->integer('zip');
+            $table->string('services');
             $table->timestamps();
         });
     }
